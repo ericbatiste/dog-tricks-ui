@@ -8,6 +8,7 @@ export default function Nav() {
       <nav>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/tricklog">Trick Log</NavLink>
+        <NavLink to="/newtrick">New Trick</NavLink>
       </nav>
     </header>
   )
