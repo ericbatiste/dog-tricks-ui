@@ -1,19 +1,22 @@
 import './TrickDetails.css';
+import { fetchTrick } from '../../ApiCalls';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-
 
 export default function TrickDetails() {
   const [selectedTrick, setSelectedTrick] = useState({});
   const id = useParams().id 
 
   useEffect(() => {
-    fetch(`http://localhost:3001/api/v1/dog-tricks/${id}`)
-    .then(res => res.json())
-    .then(data => {
-      setSelectedTrick(data.trick)
-    })
-    .catch(err => console.error(err))
+    const getTrick = async () => {
+      try {
+        const data = await fetchTrick(id);
+        setSelectedTrick(data.trick);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    getTrick();
   }, [])
   
   return (

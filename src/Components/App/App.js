@@ -5,6 +5,7 @@ import Home from '../Home/Home';
 import TrickLog from '../TrickLog/TrickLog';
 import Form from '../Form/Form';
 import TrickDetails from '../TrickDetails/TrickDetails';
+import { fetchTricks } from '../../ApiCalls';
 import { useState, useEffect } from 'react';
 
 export default function App() {
@@ -15,10 +16,15 @@ export default function App() {
   }
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/v1/dog-tricks')
-    .then(res => res.json())
-    .then(data => setTrickLog(data.tricks))
-    .catch(err => console.error(err))
+    const getTricks = async () => {
+      try {
+        const data = await fetchTricks();
+        setTrickLog(data.tricks);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    getTricks();
   }, [])
 
   return (

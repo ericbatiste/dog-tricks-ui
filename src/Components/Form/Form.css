@@ -9,6 +9,7 @@
   align-items: flex-start;
   justify-items: flex-start;
   border: 2px solid black;
+  border-radius: 2rem;
   margin: 4em;
   padding: 2rem;
 }
@@ -32,4 +33,9 @@
 
 #name, #tutorial {
   width: 20em;
+}
+
+.new-trick-form > button,
+#difficulty {
+  cursor: pointer;
 }
