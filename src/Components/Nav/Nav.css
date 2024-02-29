@@ -1,0 +1,22 @@
+header {
+  background-color: rgb(109, 172, 156);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 2rem 4rem;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+nav > a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+}
+
+.active {
+  font-weight: 700;
+}

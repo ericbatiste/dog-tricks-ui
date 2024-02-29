@@ -1,0 +1,7 @@
+.trick-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem;
+  gap: 1rem;
+}

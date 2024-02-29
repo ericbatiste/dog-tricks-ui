@@ -1,0 +1,9 @@
+.trick-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darkcyan;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  /* margin: 1rem; */
+}
