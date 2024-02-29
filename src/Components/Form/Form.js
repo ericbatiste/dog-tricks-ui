@@ -1,4 +1,5 @@
 import './Form.css';
+import { postTrick } from '../../ApiCalls';
 import { useState } from 'react';
 
 export default function Form({ addTrick }) {
@@ -15,17 +16,16 @@ export default function Form({ addTrick }) {
 
   const handleSubmit = e => {
     e.preventDefault();
-    fetch('http://localhost:3001/api/v1/dog-tricks', {
-      method: 'POST',
-      body: JSON.stringify(formData),
-      headers: { 'Content-Type': 'application/json' }
-    })
-      .then(res => res.json())
-      .then(postRes => {
-        addTrick(postRes);
-        setFormData({ name: '', difficulty: '', tutorial: '' });
-      })
-      .catch(err => console.error(err));
+    const addNewTrick = async () => {
+      try {
+        const data = await postTrick(formData);
+        setFormData(data);
+        addTrick(data)
+      } catch (error) {
+        console.log(error);
+      }
+    }
+    addNewTrick();
   };
 
   return (
