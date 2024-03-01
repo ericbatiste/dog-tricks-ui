@@ -33,7 +33,7 @@ export default function TrickLog({ trickLog, error }) {
   }
   
   return (
-    <div className='trick-log-continer'>
+    <div className='trick-log-container'>
       <Search onSearch={handleSearch}/>
       <section className='trick-list'>
         { !filteredTricks ? fidosTricks(trickLog) : fidosTricks(filteredTricks) }

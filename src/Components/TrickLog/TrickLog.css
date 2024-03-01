@@ -1,8 +1,15 @@
-.trick-list {
+.trick-log-container {
+  background-image: url('../../images/daniel-lincoln-unsplash.png');
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.trick-list {
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  margin: 2rem;
+  margin: 2rem 10%;
   gap: 1rem;
 }

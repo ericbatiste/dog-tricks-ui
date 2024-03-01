@@ -2,8 +2,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: darkcyan;
+  background-color: rgba(109, 172, 156, 0.733);
+  color: white;
   border-radius: 1rem;
-  padding: 2.5rem;
-  /* margin: 1rem; */
+  padding: 1rem;
+  text-decoration: none;
 }

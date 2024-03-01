@@ -1,6 +1,9 @@
 .new-trick-form-container {
   display: flex;
   justify-content: center;
+  height: 100vh;
+  background-image: url('../../images/jf-brou-unsplash.png');
+  background-size: cover;
 }
 
 .new-trick-form {
@@ -8,15 +11,27 @@
   flex-direction: column;
   align-items: flex-start;
   justify-items: flex-start;
-  border: 2px solid black;
+  background-color: rgba(109, 172, 156, 0.734);
+  box-shadow: 0 0 4rem 0 black;
   border-radius: 2rem;
-  margin: 4em;
-  padding: 2rem;
+  margin: 8em;
+  padding: 3rem 4rem;
+  height: max-content;
+}
+
+.new-trick-form > h2 {
+  align-self: center;
+  margin-bottom: 2rem;
 }
 
 .new-trick-form > div {
   display: flex;
   align-items: baseline;
+}
+
+.new-trick-form label {
+  font-weight: 600;
+  font-size: 1.2rem;
 }
 
 #name,
@@ -25,10 +40,9 @@
 .new-trick-form > button {
   background-color: white;
   margin: 1rem;
-  padding: .4rem;
+  padding: .5rem;
   border: 2px solid black;
-  border-radius: 2rem;
-  
+  border-radius: 10px;
 }
 
 #name, #tutorial {
@@ -38,4 +52,10 @@
 .new-trick-form > button,
 #difficulty {
   cursor: pointer;
+}
+
+.new-trick-form > button {
+  align-self: center;
+  margin-top: 2rem;
+  padding: .5rem 2rem;
 }
