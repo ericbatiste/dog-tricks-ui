@@ -3,6 +3,7 @@ import { postTrick } from '../../ApiCalls';
 import { useState } from 'react';
 
 export default function Form({ addTrick }) {
+  const [formTitle, setFormTitle] = useState(`Add a New Trick to Fido's Log!`)
   const [formData, setFormData] = useState({
     name: '',
     difficulty: '',
@@ -20,7 +21,9 @@ export default function Form({ addTrick }) {
       try {
         const data = await postTrick(formData);
         setFormData(data);
-        addTrick(data)
+        addTrick(data);
+        renderSuccessTitle();
+        setFormData({ name: '', difficulty: '', tutorial: '' })
       } catch (error) {
         console.log(error);
       }
@@ -28,9 +31,17 @@ export default function Form({ addTrick }) {
     addNewTrick();
   };
 
+  const renderSuccessTitle = () => {
+    setFormTitle('New trick added!');
+    setTimeout(() => {
+      setFormTitle(`Add a New Trick to Fido's Log!`)
+    }, 5000)
+  }
+
   return (
     <section className="new-trick-form-container">
       <form className="new-trick-form" onSubmit={handleSubmit}>
+        <h2>{formTitle}</h2>
         <div>
           <label htmlFor="name">Enter trick name:</label>
           <input
