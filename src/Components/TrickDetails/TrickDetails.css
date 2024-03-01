@@ -1,0 +1,15 @@
+.trick-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem;
+}
+
+.trick-details-container > h2 {
+  font-size: 3rem;
+}
+
+.trick-details-container > p {
+  font-size: 2rem;
+}
