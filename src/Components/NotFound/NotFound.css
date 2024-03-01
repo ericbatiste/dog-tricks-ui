@@ -1,6 +1,9 @@
 .not-found-container {
+  background-image: url('../../images/jenny-marvin-unsplash.png');
+  background-size: cover;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   height: 100vh;
   width: auto;
@@ -8,9 +11,17 @@
 
 .not-found-container > article {
   text-align: center;
-  margin-top: 20%;
+  padding: 2rem;
+  border-radius: 2rem;
+  background-color: rgba(255, 255, 255, 0.457);
+}
+
+.not-found-container h2 {
+  font-size: 3rem;
 }
 
 .not-found-link {
+  font-size: 2rem;
   text-decoration: none;
+  color: black;
 }
