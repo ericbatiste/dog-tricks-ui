@@ -49,6 +49,7 @@ export default function Form({ addTrick }) {
             id="name"
             name="name"
             value={formData.name}
+            autoComplete='off'
             onChange={handleInputChange}
           />
         </div>
@@ -77,6 +78,7 @@ export default function Form({ addTrick }) {
             id="tutorial"
             name="tutorial"
             value={formData.tutorial}
+            autoComplete='off'
             onChange={handleInputChange}
           />
         </div>
