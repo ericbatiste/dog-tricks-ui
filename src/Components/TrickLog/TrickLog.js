@@ -3,7 +3,7 @@ import TrickCard from '../TrickCard/TrickCard';
 import Search from '../Search/Search';
 import { useState } from 'react';
 
-export default function TrickLog({ trickLog }) {
+export default function TrickLog({ trickLog, error }) {
   const [filteredTricks, setFilteredTricks] = useState(null)
 
   const handleSearch = (query) => {
@@ -14,6 +14,9 @@ export default function TrickLog({ trickLog }) {
   }
 
   const fidosTricks = (tricks) => {
+    if (!tricks.length) {
+      return `No tricks by that name, please adjust your search or add a new trick to the Trick Log`; 
+    }
     return tricks.map(trick => {
       return (
         <TrickCard 
@@ -25,13 +28,15 @@ export default function TrickLog({ trickLog }) {
     })
   }
   
-  if (!trickLog) return <></>
+  if (!trickLog || error) {
+    return <p className='error-msg'>{error}</p>
+  }
   
   return (
     <div className='trick-log-continer'>
       <Search onSearch={handleSearch}/>
       <section className='trick-list'>
-        {!filteredTricks ? fidosTricks(trickLog) : fidosTricks(filteredTricks)}
+        { !filteredTricks ? fidosTricks(trickLog) : fidosTricks(filteredTricks) }
       </section>
     </div>
   )

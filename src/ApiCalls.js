@@ -7,7 +7,7 @@ export const fetchTricks = async () => {
     }
     return response.json();
   } catch (error) {
-    console.error(error)
+    throw error;
   }
 }
 
@@ -20,7 +20,7 @@ export const fetchTrick = async (id) => {
     }
     return response.json();
   } catch (error) {
-    console.error(error)
+    throw error;
   }
 }
 
@@ -37,6 +37,6 @@ export const postTrick = async (data) => {
     }
     return response.json();
   } catch (error) {
-    console.error(error)
+    throw error;
   }
 }

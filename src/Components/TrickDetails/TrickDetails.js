@@ -3,7 +3,7 @@ import { fetchTrick } from '../../ApiCalls';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-export default function TrickDetails() {
+export default function TrickDetails({ error, setError }) {
   const [selectedTrick, setSelectedTrick] = useState({});
   const id = useParams().id 
 
@@ -13,17 +13,21 @@ export default function TrickDetails() {
         const data = await fetchTrick(id);
         setSelectedTrick(data.trick);
       } catch (error) {
-        console.log(error);
+        setError(error.message)
       }
     }
     getTrick();
   }, [])
-  
+
   return (
-    <section className='trick-details-container'>
-      <h2>{selectedTrick.name}</h2>
-      <p>difficulty: {selectedTrick.difficulty}</p>
-      <p>{selectedTrick.tutorial}</p>
-    </section>
+    <>
+    { error ? <p className='error-msg'>{ error }</p> :
+      <section className='trick-details-container'>
+        <h2>{selectedTrick.name}</h2>
+        <p>difficulty: {selectedTrick.difficulty}</p>
+        <p>{selectedTrick.tutorial}</p>
+      </section>
+    }
+    </>
   )
 }
