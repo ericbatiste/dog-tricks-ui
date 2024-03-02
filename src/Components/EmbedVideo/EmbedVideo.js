@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import './EmbedVideo.css';
 
 export default function EmbedVideo({ videoId }) {
@@ -13,4 +14,8 @@ export default function EmbedVideo({ videoId }) {
       />
     </div>
   );
+}
+
+EmbedVideo.propTypes = {
+  videoId: PropTypes.string.isRequired
 }

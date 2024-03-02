@@ -1,6 +1,7 @@
 import './Form.css';
 import { postTrick } from '../../ApiCalls';
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 export default function Form({ addTrick }) {
   const [formTitle, setFormTitle] = useState(`Add a New Trick to Fido's Log!`)
@@ -87,4 +88,8 @@ export default function Form({ addTrick }) {
       </form>
     </section>
   );
+}
+
+Form.propTypes = {
+  addTrick: PropTypes.func.isRequired
 }

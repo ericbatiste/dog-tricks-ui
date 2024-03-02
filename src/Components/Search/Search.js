@@ -1,7 +1,8 @@
-import { useState } from 'react';
 import './Search.css';
+import { useState } from 'react';
+import PropTypes from 'prop-types';
 
-export default function Search({ onSearch }) {
+export default function Search({ handleSearch }) {
   const [query, setQuery] = useState('');
 
   const handleChange = (e) => {
@@ -10,7 +11,7 @@ export default function Search({ onSearch }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSearch(query);
+    handleSearch(query);
   };
 
   const handleKeyPress = (e) => {
@@ -31,4 +32,8 @@ export default function Search({ onSearch }) {
       />
     </form>
   )
+}
+
+Search.propTypes = {
+  handleSearch: PropTypes.func.isRequired
 }
