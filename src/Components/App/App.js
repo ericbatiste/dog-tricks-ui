@@ -60,10 +60,7 @@ export default function App() {
         <Route 
           path="/newtrick" 
           element={
-            <Form
-              addTrick={addTrick} 
-              error={error} 
-            />
+            <Form addTrick={addTrick} />
           } 
         />
         <Route 

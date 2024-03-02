@@ -22,6 +22,7 @@ export default function TrickLog({ trickLog, error }) {
       return (
         <TrickCard 
           name={trick.name}
+          difficulty={trick.difficulty}
           id={trick.id}
           key={trick.id}
         />
@@ -49,7 +50,7 @@ TrickLog.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
-      difficulty: PropTypes.number.isRequired,
+      difficulty: PropTypes.string.isRequired,
       tutorial: PropTypes.string.isRequired,
     })
   )

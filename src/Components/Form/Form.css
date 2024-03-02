@@ -54,6 +54,11 @@
   cursor: pointer;
 }
 
+.alert {
+  align-self: center;
+  font-weight: 600;
+}
+
 .new-trick-form > button {
   align-self: center;
   margin-top: 2rem;
