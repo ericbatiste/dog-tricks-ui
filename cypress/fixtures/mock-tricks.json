@@ -1,0 +1,22 @@
+{
+ "tricks": [
+    {
+      "id": "1",
+      "name": "Sit",
+      "difficulty": "1",
+      "tutorial": "https://www.youtube.com/watch?v=qExwIfed7jg"
+    },
+    {
+      "id": "2",
+      "name": "Shake",
+      "difficulty": "2",
+      "tutorial": "https://www.youtube.com/watch?v=CRoDTUkzVpU"
+    },
+    {
+      "id": "3",
+      "name": "Sit Pretty",
+      "difficulty": "3",
+      "tutorial": "https://www.youtube.com/watch?v=IQUerO0woqw"
+    }
+  ]
+}
