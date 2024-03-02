@@ -1,5 +1,5 @@
 export const fetchTricks = async () => {
-  const url = 'http://localhost:3001/api/v1/dog-tricks/';
+  const url = 'https://dog-tricks-api-4.onrender.com/api/v1/dog-tricks/';
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -12,7 +12,7 @@ export const fetchTricks = async () => {
 }
 
 export const fetchTrick = async (id) => {
-  const url = `http://localhost:3001/api/v1/dog-tricks/${id}`;
+  const url = `https://dog-tricks-api-4.onrender.com/api/v1/dog-tricks/${id}`;
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -25,7 +25,7 @@ export const fetchTrick = async (id) => {
 }
 
 export const postTrick = async (data) => {
-  const url = 'http://localhost:3001/api/v1/dog-tricks';
+  const url = 'https://dog-tricks-api-4.onrender.com/api/v1/dog-tricks';
   try {
     const response = await fetch(url, {
       method: 'POST',
