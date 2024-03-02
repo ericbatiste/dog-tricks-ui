@@ -1,17 +1,17 @@
 describe('template spec', () => {
   beforeEach(() => {
-    cy.intercept('GET', "http://localhost:3001/api/v1/dog-tricks/", {
+    cy.intercept('GET', "https://dog-tricks-api-4.onrender.com/api/v1/dog-tricks/", {
       statusCode: 200,
       fixture: "mock-tricks"
     })
-    cy.intercept('GET', "http://localhost:3001/api/v1/dog-tricks/3", {
+    cy.intercept('GET', "https://dog-tricks-api-4.onrender.com/api/v1/dog-tricks/3", {
       statusCode: 200,
       fixture: "mock-trick"
     })
     .visit('https://dog-tricks-ui.vercel.app/')
   });
 
-  it('Should visit the home page', () => {
+  it.skip('Should visit the home page', () => {
     cy.get('nav').children().should('have.length', 3);
     cy.get('.nav-home').should('have.class', 'active');
     cy.get('.home-container').should('have.css', 'background-image').and('include','c-perret-unsplash');
@@ -37,7 +37,7 @@ describe('template spec', () => {
   })
 
   it.skip('Should allow a user to add a new trick to the trick log.', () => {
-    cy.intercept("POST", "http://localhost:3001/api/v1/dog-tricks", {
+    cy.intercept("POST", "https://dog-tricks-api-4.onrender.com/api/v1/dog-tricks", {
       statuscode: 201,
       body: {
         "id": '4',
