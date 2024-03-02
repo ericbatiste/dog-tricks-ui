@@ -1,5 +1,5 @@
 export const fetchTricks = async () => {
-  const url = 'http://localhost:3001/api/v1/dog-tricks';
+  const url = 'http://localhost:3001/api/v1/dog-tricks/';
   try {
     const response = await fetch(url);
     if (!response.ok) {

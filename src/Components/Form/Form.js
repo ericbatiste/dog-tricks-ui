@@ -4,7 +4,8 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 
 export default function Form({ addTrick }) {
-  const [formTitle, setFormTitle] = useState(`Add a New Trick to Fido's Log!`)
+  const [formTitle, setFormTitle] = useState(`Add a New Trick to Fido's Log!`);
+  const [alert, setAlert] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     difficulty: '',
@@ -16,8 +17,13 @@ export default function Form({ addTrick }) {
     setFormData({ ...formData, [name]: value });
   };
 
+  const isFormComplete = () => {
+    return !Object.values(formData).some(value => value === '')
+  }
+
   const handleSubmit = e => {
     e.preventDefault();
+    if (!isFormComplete()) setAlert('Please fill out all inputs');
     const addNewTrick = async () => {
       try {
         const data = await postTrick(formData);
@@ -28,7 +34,7 @@ export default function Form({ addTrick }) {
       } catch (error) {
         console.log(error);
       }
-    }
+    } 
     addNewTrick();
   };
 
@@ -83,7 +89,7 @@ export default function Form({ addTrick }) {
             onChange={handleInputChange}
           />
         </div>
-
+        <p className='alert'>{alert}</p>
         <button type="submit">Submit</button>
       </form>
     </section>
