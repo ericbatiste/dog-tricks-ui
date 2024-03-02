@@ -32,7 +32,7 @@ export default function Form({ addTrick }) {
         renderSuccessTitle();
         setFormData({ name: '', difficulty: '', tutorial: '' })
       } catch (error) {
-        console.log(error);
+        console.log(error)
       }
     } 
     addNewTrick();

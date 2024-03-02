@@ -50,7 +50,7 @@ TrickLog.propTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
-      difficulty: PropTypes.number.isRequired,
+      difficulty: PropTypes.string.isRequired,
       tutorial: PropTypes.string.isRequired,
     })
   )
