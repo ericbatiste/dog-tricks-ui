@@ -1,4 +1,5 @@
 import './Home.css';
+import PropTypes from 'prop-types';
 
 export default function Home({ error }) {
   return (
@@ -11,4 +12,8 @@ export default function Home({ error }) {
       </div>
     </>
   )
+}
+
+Home.propTypes = {
+  error: PropTypes.string.isRequired
 }

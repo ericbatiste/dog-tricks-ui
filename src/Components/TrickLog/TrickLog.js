@@ -2,6 +2,7 @@ import './TrickLog.css';
 import TrickCard from '../TrickCard/TrickCard';
 import Search from '../Search/Search';
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 export default function TrickLog({ trickLog, error }) {
   const [filteredTricks, setFilteredTricks] = useState(null)
@@ -34,10 +35,22 @@ export default function TrickLog({ trickLog, error }) {
   
   return (
     <div className='trick-log-container'>
-      <Search onSearch={handleSearch}/>
+      <Search handleSearch={handleSearch}/>
       <section className='trick-list'>
         { !filteredTricks ? fidosTricks(trickLog) : fidosTricks(filteredTricks) }
       </section>
     </div>
+  )
+}
+
+TrickLog.propTypes = {
+  error: PropTypes.string.isRequired,
+  trickLog: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      difficulty: PropTypes.number.isRequired,
+      tutorial: PropTypes.string.isRequired,
+    })
   )
 }

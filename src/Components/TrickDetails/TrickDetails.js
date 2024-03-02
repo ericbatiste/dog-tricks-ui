@@ -3,6 +3,7 @@ import { fetchTrick } from '../../ApiCalls';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import EmbedVideo from '../EmbedVideo/EmbedVideo';
+import PropTypes from 'prop-types';
 
 export default function TrickDetails({ error, setError }) {
   const [selectedTrick, setSelectedTrick] = useState({});
@@ -35,4 +36,9 @@ export default function TrickDetails({ error, setError }) {
       }
     </>
   );
+}
+
+TrickDetails.propTypes = {
+  setError: PropTypes.func.isRequired,
+  error: PropTypes.string.isRequired
 }
