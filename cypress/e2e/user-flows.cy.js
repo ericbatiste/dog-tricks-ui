@@ -11,14 +11,14 @@ describe('template spec', () => {
     .visit('https://dog-tricks-ui.vercel.app/')
   });
 
-  it.skip('Should visit the home page', () => {
+  it('Should visit the home page', () => {
     cy.get('nav').children().should('have.length', 3);
     cy.get('.nav-home').should('have.class', 'active');
     cy.get('.home-container').should('have.css', 'background-image').and('include','c-perret-unsplash');
     cy.get('article').contains('h1', `Fido's Trick Log`);
   })
   
-  it.skip('Should navigate to the Trick Log, filter tricks with search, and click on a trick to go to that tricks details', () => {
+  it('Should navigate to the Trick Log, filter tricks with search, and click on a trick to go to that tricks details', () => {
     cy.get('.nav-log').click().should('have.class', 'active')
     cy.get('.trick-log-container').should('have.css', 'background-image').and('include','daniel-lincoln-unsplash');
     cy.get('.trick-list').children().should("have.length", 3)
@@ -36,7 +36,7 @@ describe('template spec', () => {
     cy.get('iframe').should('have.attr', 'src', 'https://www.youtube.com/embed/IQUerO0woqw')
   })
 
-  it.skip('Should allow a user to add a new trick to the trick log.', () => {
+  it('Should allow a user to add a new trick to the trick log.', () => {
     cy.intercept("POST", "https://dog-tricks-api-4.onrender.com/api/v1/dog-tricks", {
       statuscode: 201,
       body: {

@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# Fido's Trick Log
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![App demo](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3FmcHhobDB3Z2YzMGVrbThsdmZ2anN1YWp6NjZqbHk2NDhsMnZvMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UAeGGidX7lC7hde9wP/giphy.gif)
 
-## Available Scripts
+- Fido's Trick Log is a web application that caters to dog owners who are looking to take their pups skills to the next level. The app features a 'Trick Log' where the user can compile their favorite training videos in one place. 
 
-In the project directory, you can run:
+## Contributors
 
-### `npm start`
+- [Eric Batiste](https://github.com/ericbatiste)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- The user can access a list of dog training tutorials from YouTube, along with a trick name and difficulty level.
+- The user can add new tutorials to the trick log through a form.
+- The user can filter / search for the tutorials by name while on the Trick Log page.
 
-### `npm test`
+## Live Link
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[Click here](https://dog-tricks-ui.vercel.app/) to visit the application.
+- If the app isn't working right away just give the API half a minute to spin up.
 
-### `npm run build`
+### Challenges
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Deploying both a frontend and backend application and making everything run smoothly.
+- My personal timeline for completing this project was about 2.5 days, so I needed to hustle.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Clone the repository:
 
-### `npm run eject`
+`git clone git@github.com:ericbatiste/dog-tricks-ui.git`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Navigate to the project directory:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`cd dog-tricks-ui`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Install dependencies:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+`npm install`
 
-## Learn More
+### Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Start the development server:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+`npm start`
 
-### Code Splitting
+Open your web browser and visit http://localhost:3000 to access the application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### Future Improvements
 
-### Analyzing the Bundle Size
+Some ideas for new features and improvements to the site going forward:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- Give the user the ability to remove tricks from the Trick Log and add a delete request to the API.
+- Give the user a space to add notes on their dog's progress with each trick.
+- Add links to the most recent tricks on the home page for quick access.
+- Add User Authentication for a personalized experience.
+- Hook the site up to a proper database to support multiple users.
 
-### Making a Progressive Web App
+#### Acknowledgements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project was an [assignment](https://frontend.turing.edu/projects/module-3/stretch.html) during our time as Front End students at the [Turing School of Software and Design](https://turing.edu/).
