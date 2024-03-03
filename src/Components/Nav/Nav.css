@@ -3,7 +3,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 4rem;
+  padding: 1.2rem;
 }
 
 nav {
@@ -14,7 +14,12 @@ nav {
 nav > a {
   text-decoration: none;
   color: black;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  transition: transform 200ms ease;
+}
+
+nav > a:hover {
+  transform: scale(1.1);
 }
 
 .active {

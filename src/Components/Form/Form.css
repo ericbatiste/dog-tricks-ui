@@ -21,17 +21,18 @@
 
 .new-trick-form > h2 {
   align-self: center;
+  font-size: 1.8rem;
   margin-bottom: 2rem;
 }
 
 .new-trick-form > div {
   display: flex;
-  align-items: baseline;
+  align-items: last baseline;
 }
 
 .new-trick-form label {
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 #name,
@@ -62,5 +63,7 @@
 .new-trick-form > button {
   align-self: center;
   margin-top: 2rem;
-  padding: .5rem 2rem;
+  padding: 0 2rem;
+  font-size: 1rem;
+  font-family: 'Inknut Antiqua';
 }
