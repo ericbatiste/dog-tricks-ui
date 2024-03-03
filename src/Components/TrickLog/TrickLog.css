@@ -3,7 +3,7 @@
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  min-height: 100vh;
 }
 
 .trick-list {
@@ -11,5 +11,6 @@
   flex-direction: column;
   text-align: center;
   margin: 2rem 10%;
+  padding: 1em 0 10em 0;
   gap: 1rem;
 }

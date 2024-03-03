@@ -4,10 +4,6 @@
 
 - Fido's Trick Log is a web application that caters to dog owners who are looking to take their pups skills to the next level. The app features a 'Trick Log' where the user can compile their favorite training videos in one place. 
 
-## Contributors
-
-- [Eric Batiste](https://github.com/ericbatiste)
-
 ## Features
 
 - The user can access a list of dog training tutorials from YouTube, along with a trick name and difficulty level.
@@ -44,13 +40,18 @@ Start the development server:
 
 `npm start`
 
+Run Cypress tests:
+
+`npm run cy`
+
 Open your web browser and visit http://localhost:3000 to access the application.
 
 #### Future Improvements
 
 Some ideas for new features and improvements to the site going forward:
 
-- Give the user the ability to remove tricks from the Trick Log and add a delete request to the API.
+- Give the user the ability to remove tricks from the Trick Log and add a DELETE request to the API.
+- Give the user the ability to edit tricks from the Trick Log and add a PATCH request to the API.
 - Give the user a space to add notes on their dog's progress with each trick.
 - Add links to the most recent tricks on the home page for quick access.
 - Add User Authentication for a personalized experience.
