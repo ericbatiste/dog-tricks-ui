@@ -8,6 +8,7 @@ export default function Home({ error }) {
       <div className='home-container'>
         <article>
           <h1>Fido's Trick Log</h1>
+          <p>For the good boy in all of us.</p>
         </article>
       </div>
     </>

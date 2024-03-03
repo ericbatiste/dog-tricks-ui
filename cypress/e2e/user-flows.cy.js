@@ -14,8 +14,9 @@ describe('template spec', () => {
   it('Should visit the home page', () => {
     cy.get('nav').children().should('have.length', 3);
     cy.get('.nav-home').should('have.class', 'active');
-    cy.get('.home-container').should('have.css', 'background-image').and('include','c-perret-unsplash');
+    cy.get('.home-container').should('have.css', 'background-image').and('include','robin-jonathan-deutsch-unsplash');
     cy.get('article').contains('h1', `Fido's Trick Log`);
+    cy.get('article').contains('p', `For the good boy in all of us.`);
   })
   
   it('Should navigate to the Trick Log, filter tricks with search, and click on a trick to go to that tricks details', () => {

@@ -1,20 +1,25 @@
 .home-container {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: center;
   height: 100vh;
-  background-image: url('../../images/c-perret-unsplash.png');
+  background-image: url('../../images/robin-jonathan-deutsch-unsplash.png');
   background-size: cover;
 }
 
 .home-container > article {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  background-color: rgba(109, 172, 156, 0.734);
-  box-shadow: 0 0 4rem 0 black;
-  height: 25em;
-  width:25em;
-  margin-right: 15em;
-  border-radius: 50%;
+  padding: 2rem 2rem 8rem 2rem;
+}
+
+.home-container h1 {
+  font-size: 4rem;
+  color: aliceblue;
+}
+
+.home-container p {
+  font-size: 2.2rem;
+  color: aliceblue;
 }
