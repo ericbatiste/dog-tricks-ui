@@ -10,6 +10,8 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  color: aliceblue;
+  font-size: 1.5rem;
   margin: 2rem 10%;
   padding: 1em 0 10em 0;
   gap: 1rem;
