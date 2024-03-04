@@ -29,6 +29,9 @@ describe('template spec', () => {
     cy.get('.trick-card').last().contains('p', 'Difficulty: 3')
 
     cy.get('.search-form').get('input').should('have.attr', 'placeholder', 'Search for a trick!')
+    cy.get('.search-form').type('Boing{enter}')
+    cy.get('.trick-list').contains('No tricks by that name, please adjust your search or add a new trick to the Trick Log');
+    cy.get('.search-form').focused().clear()
     cy.get('.search-form').type('sit{enter}')
     cy.get('.trick-list').children().should('have.length', 2)
     cy.get('.trick-card').last().click()
@@ -60,5 +63,22 @@ describe('template spec', () => {
     cy.get('.trick-list').children().should("have.length", 4);
     cy.get('.trick-card').last().contains('h3', 'Test trick');
     cy.get('.trick-card').last().contains('p', 'Difficulty: 4');
+  })
+
+  it('Should handle a bad url path', () => {
+    cy.visit('https://dog-tricks-ui.vercel.app/potato')
+    cy.get('.not-found-container').should('have.css', 'background-image').and('include','jenny-marvin-unsplash')
+    cy.get('article').contains('h2', 'Nothing to see here');
+    cy.get('.not-found-link').contains('Take me Home').click();
+    cy.get('.nav-home').should('have.class', 'active');
+  })
+
+  it('Should handle a failed network request.', () => {
+    cy.intercept('GET', "https://dog-tricks-api-4.onrender.com/api/v1/dog-tricks/", {
+      statusCode: 500
+    })
+    cy.get('.error-msg').contains('p', 'Sorry, failed network request, please try again.');
+    cy.get('.nav-log').click().should('have.class', 'active');
+    cy.get('.error-msg').contains('p', 'Sorry, failed network request, please try again.');
   })
 })
