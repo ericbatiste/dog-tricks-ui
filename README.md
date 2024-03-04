@@ -6,6 +6,7 @@
 
 ## Features
 
+- Fido's Trick Log fetches data from a Node.js / Express API that can be found [here](https://github.com/ericbatiste/dog-tricks-api).
 - The user can access a list of dog training tutorials from YouTube, along with a trick name and difficulty level.
 - The user can add new tutorials to the trick log through a form.
 - The user can filter / search for the tutorials by name while on the Trick Log page.
@@ -13,7 +14,7 @@
 ## Live Link
 
 [Click here](https://dog-tricks-ui.vercel.app/) to visit the application.
-- If the app isn't working right away just give the API half a minute to spin up.
+- If the app isn't working right away just give the API several to spin up.
 
 ### Challenges
 
@@ -48,7 +49,7 @@ Open your web browser and visit http://localhost:3000 to access the application.
 
 #### Future Improvements
 
-Some ideas for new features and improvements to the site going forward:
+Plans for new features and improvements to the site:
 
 - Give the user the ability to remove tricks from the Trick Log and add a DELETE request to the API.
 - Give the user the ability to edit tricks from the Trick Log and add a PATCH request to the API.
